@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHRMS</title>
+    <link rel="stylesheet" href="landingstyle.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+  <style>
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    /* Set a style for all buttons */
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+    
+    /* Center the image and position the close button */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+    }
+    
+    img.avatar {
+      width: 15%;
+      border-radius: 25%;
+    }
+    
+    .container {
+      padding: 16px;
+    }
+    
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      padding-top: 60px;
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+    
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)} 
+      to {-webkit-transform: scale(1)}
+    }
+      
+    @keyframes animatezoom {
+      from {transform: scale(0)} 
+      to {transform: scale(1)}
+    }
+    
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
+    }
+    </style>
+  <nav class="navbar navbar-expand-sm bg-secondary navbar-white sticky-top">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <img src="imgs/32-removebg-preview.png" alt="logo"  width="70" height="60">
+      <span class="fs-4">BRMS</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link text-dark" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="#ft" class="nav-link text-dark">Features</a></li>
+      <li class="nav-item"><a href="#ft" class="nav-link text-dark">About Us</a></li>
+      <li class="nav-item"><a href="#cu" class="nav-link text-dark">Contact Us</a></li>
+    </ul>
+</nav>
+    <main>  
+      <div class="design" id="home">
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold lh-1 mb-3">BARANGAY RECORDS MANAGEMENT SYSTEM</h1>
+              <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"type="button" class="btn btn-primary btn-lg px-4 me-md-2">Login</button>
+                <div id="id01" class="modal">
+    
+                  <form class="modal-content animate" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <img src="imgs/8-removebg-preview.png" alt="Avatar" class="avatar">
+                    </div>
+                
+                    <div class="container">
+                      <label for="uname"><b>Username</b></label>
+                      <input type="text" placeholder="Enter Username" name="uname" required>
+                
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                      <button type="submit">Login</button>
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+                    </div>
+                
+                    <div class="container" style="background-color:#f1f1f1">
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                      <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                  </form>
+                </div>
+                
+                <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                </script>
+                <a href="form.html">
+                  <button type="button" class="btn btn-outline-secondary btn-lg px-4">Sign-Up</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+          <div class="container px-4 py-5" id="features">
+              <h2 class="pb-2 border-bottom" id="ft">Features</h2>
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 ">
+                <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"/></svg>
+                    <div>
+                      <h3 class="fw-bold mb-0 fs-4 text-body-emphasis"> Manage Appointments</h3>
+                      <p>Request and schedule appointments, view upcoming appointment details,
+                        and get directions to your appointment location.</p>
+                    </div>
+                  </div>
+                <div class="col d-flex align-items-start">
+                  <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"/></svg>
+                  <div>
+                    <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">View and Manage Health Records</h3>
+                    <p>View, download, and send your most up-to-date health records on any internet-enabled device. 
+                       View your current vitals,immunizations, lab results, and other 
+                       important health information.</p>
+                  </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                  <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"/></svg>
+                  <div>
+                    <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Manage Your Profile</h3>
+                    <p>Update your personal and contact information, set your preferred provider and medical location,
+                       and update your login information and insurance information.</p>
+                  </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                  <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"/></svg>
+                  <div>
+                    <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Manage Documents & Forms
+                      Download</h3>
+                    <p>Download, view, and submit financial, administrative, and medical documents and forms.
+                      You'll also be able to access provider recommended health education materials.</p>
+                  </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                  <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"/></svg>
+                  <div>
+                    <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Send Secure Messages</h3>
+                    <p>Send and receive secure messages to and from your provider.
+                       You'll be able to securely ask medical and insurance questions, request medical records,
+                       and send documents and forms to your provider.</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+      </div>
+          <div class="cu">
+            <div class="px-4 py-5 my-0 text-center bg-success p-0 text-dark bg-opacity-10" id="cu">
+              <img class="d-block mx-auto mb-4" src="imgs/384543871_724787162797310_8734564214874848058_n-removebg-preview.png" alt="logo" width="75" height="70">
+              <h1 class="display-5 fw-bold text-body-emphasis">Contact Us</h1>
+              <h3>Barangay Response Team </h3>
+              <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4"><b>Phone Numbers:</b><br>
+                  0919-084-9290 <br>
+                0929-554-1376 <br>
+              0998-259-4165 <br>
+            0919-084-9225 <br>
+          0923-744-7911</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> 
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+    <footer>
+      <div class="p-3 mb-2 bg-success p-2 text-dark bg-opacity-10">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <img src="imgs/32-removebg-preview.png" alt="logo"width="" height="30">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Barangay Records Management System</span>
+          </div>
+        </footer>
+      </div>
+    </footer>
+</body>
+<script src="js/bootstrap.min.js"></script>
+</html>
