@@ -1,4 +1,14 @@
- h1{
+ .h1{
    text-transform: uppercase;
-}
+ }
+ .blog-modal-container{
+ height: 100vh;
+ width: 100vw;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ filter: blur(8px );
+ -webkit-filter: blur(8px);
+ position: fixed;
 
+ }
