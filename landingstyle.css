@@ -17,6 +17,7 @@
   }
   
   .navbar a:hover {
+    background: #ddd;
     color: black;
   }
 ul :hover{
