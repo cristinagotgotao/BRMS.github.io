@@ -1,4 +1,3 @@
 {
-    "php.suggest.basic": true,
-    "php.validate.executablePath": ""
+    "liveServer.settings.port": 5501
 }
